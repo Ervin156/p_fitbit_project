@@ -1,0 +1,610 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    height: 559px;
+    width: 375px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('./P_Fitbit/P_bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#header-top {
+    margin-left: 10px;
+    height: auto;
+    width: 22vh;
+    left: 10px;
+}
+
+#header-buttom {
+    opacity: 0;
+    align-self: center;
+    margin-top: 20px;
+    height: 10vh;
+    animation: show 1.8s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.loading-container {
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    height: 250px;
+    animation: hidden 4s step-end;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.loading-container img {
+    position: absolute;
+    height: 260px;
+    display: flex;
+    width: auto;
+    padding: 0;
+}
+
+.loading-container #first {
+    opacity: 0;
+    top: -50%;
+    left: -5px;
+    z-index: 2;
+    height: 275px;
+    animation: move-first 1.5s ease-in-out;
+    animation-delay: 1.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.loading-container #second {
+    opacity: 0;
+    z-index: 1;
+    top: 0px;
+    left: 110px;
+    height: 245px;
+    animation: show-first-watch 0.5s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.loading-container #third {
+    opacity: 0;
+    top: 50%;
+    z-index: 0;
+    right: -14px;
+    height: 235px;
+    animation: move-third 1.5s ease-in-out;
+    animation-direction: normal;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.loading-container .watch-shadow {
+    position: absolute;
+    bottom: -8vh;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.loading-container .watch-shadow img {
+    height: 80px;
+    animation: show 0.5s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.loading-container .loading-price {
+    position: absolute;
+    bottom: -10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    animation: show 1.8s linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.loading-container .loading-price img {
+    height: 18vh;
+    width: auto;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.select-product-container {
+    display: flex;
+    height: 35vh;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    animation: show-product-container 5.5s ease-in;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.select-product-container #right-arrow,
+#left-arrow {
+    margin: 10px;
+    height: 6vh;
+    width: auto;
+}
+
+.current-product {
+    margin: 0 auto;
+    width: 40vh;
+    height: 250px;
+}
+
+.information-for-current-watch .disclaimer {
+    text-align: center;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.slide {
+    width: auto;
+}
+
+.slide-item {
+    margin: 0 auto;
+    width: auto;
+    height: 38vh;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.information-for-current-watch {
+    position: relative;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.information-for-current-watch img {
+    height: 5vh;
+}
+
+.information-for-current-watch .name-current-watch {
+    text-align: center;
+}
+
+.information-for-current-watch .current-price {
+    right: -6vh;
+    top: 9.5vh;
+    position: absolute;
+    align-self: flex-end;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.select-color-watch {
+    position: relative;
+    height: 6vh;
+    /* width: 100%; */
+}
+
+.select-color-watch nav {
+    top: 2vh;
+    right: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+.select-color-watch nav img {
+    height: 5vh;
+    margin: 1vh;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.current-product {
+    position: relative;
+}
+
+.current-product .watch-shadow {
+    position: absolute;
+    bottom: -8vh;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 0;
+}
+
+.current-product .watch-shadow img {
+    height: 80px
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+footer {
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer img {
+    height: 6vh;
+}
+
+.footer img:last-child {
+    margin-right: 5px;
+}
+
+.footer img:first-child {
+    margin-left: 15px;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.fade {
+    -webkit-animation: fade 1.5s linear;
+    animation: fade 1.5s linear;
+    animation-duration: 1.5s ea;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.hidden {
+    display: none;
+}
+
+.visibility {
+    opacity: 1;
+}
+
+@keyframes show-first-watch {
+    from {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes move-first {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        top: -10px;
+    }
+}
+
+@keyframes move-third {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes hidden {
+    from {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    to {
+        visibility: hidden;
+        margin-top: -37vh;
+    }
+}
+
+@keyframes show-product-container {
+    from {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes move-up {
+    50% {
+        margin-top: 30px;
+    }
+    90% {
+        margin-top: 30px;
+    }
+    to {
+        animation-duration: 0;
+        margin-top: 0;
+    }
+}
+ 
+@media only screen and (max-width:375px) and (max-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio:2) {
+    .wrapper {
+        height: 100vh;
+    }
+    
+    .loading-container .loading-price {
+        bottom: -14vh;
+    }
+    .loading-container .loading-price img {
+        height: 23vh;
+        width: auto;
+    }
+   
+    .information-for-current-watch {
+        margin-top: 4vh;
+        height: 20vh;
+        justify-content: space-between;
+    }
+    .information-for-current-watch .current-price {
+        position: relative;
+        right: -5vh;
+        top: 4vh;
+        align-self: flex-end;
+    }
+    .information-for-current-watch img {
+        height: 5vh;
+    }
+   
+}
+
+@media only screen and (max-width:667px) and (max-height: 375px) and (orientation: landscape) and (-webkit-device-pixel-ratio:2) {
+    .wrapper {
+        background-position-y: 60px;
+        background-image: url('./P_Fitbit/not_available.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    header,
+    .main-body,
+    footer {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:400px) and (max-width: 420px) and (orientation:portrait) {
+    .wrapper {
+        width: 414px;
+        height: 100vh;
+    }
+    .select-product-container .watch-shadow {
+        bottom: -12vh;
+    }
+  
+    .loading-container .watch-shadow {
+        bottom: -10vh;
+    }
+    .loading-container .loading-price {
+        bottom: -16vh;
+    }
+    .loading-container .loading-price img {
+        height: 24vh;
+        width: auto;
+    }
+    .loading-container #first {
+        height: 300px;
+    }
+    .loading-container #second {
+        left: 126px;
+        height: 260px;
+    }
+    .loading-container #third {
+        margin-top: 1vh;
+    }
+    .information-for-current-watch {
+        margin-top: 4vh;
+        height: 20vh;
+        justify-content: space-between;
+    }
+    .information-for-current-watch .current-price {
+        position: relative;
+        right: -5vh;
+        top: 3vh;
+        align-self: flex-end;
+    }
+    .information-for-current-watch img {
+        height: 5vh;
+    }
+  
+    @keyframes hidden {
+        from {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        to {
+            visibility: hidden;
+            margin-top: -34vh;
+        }
+    }
+}
+
+@media (min-width:730px),
+(orientation: landscape) and (-webkit-device-pixel-ratio:2) {
+    .wrapper {
+        background-position-y: 60px;
+        background-image: url('./P_Fitbit/not_available.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+    }
+    header,
+    .main-body,
+    footer {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:414px) and (max-height: 612px) and (orientation:portrait) {
+   
+    .loading-container .loading-price {
+        bottom: -14vh;
+    }
+  
+    .select-product-container .slide-item {
+        height: 45vh;
+    }
+ 
+    .loading-container #second {
+        left: 21vh;
+        height: 260px;
+    }
+    .information-for-current-watch .disclaimer {
+        margin-bottom: 3vh;
+
+    }
+    .information-for-current-watch .current-price {
+        position: relative;
+        right: -8vh;
+        top: -6vh;
+        align-self: flex-end;
+    }
+  
+    .footer img {
+        height: 7vh;
+    }
+    @keyframes hidden {
+        from {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        to {
+            visibility: hidden;
+            margin-top: -37vh;
+        }
+    }
+}
+
+@media only screen and (min-width:375px) and (max-height: 559px) and (orientation:portrait) {
+
+    .information-for-current-watch .current-price {
+        right: -7vh;
+        top: -2vh;
+    }
+    .select-product-container .watch-shadow {
+        bottom: -5vh;
+    }
+    .loading-container .loading-price {
+        bottom: -12vh;
+    }
+    .loading-container .loading-price img {
+        height: 22vh;
+        width: auto;
+    }
+    .loading-container .watch-shadow {
+        bottom: -10vh;
+    }
+    .select-product-container .slide-item {
+        height: 40vh;
+    }
+    .footer img {
+        height: 7vh;
+    }
+    @keyframes hidden {
+        from {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        to {
+            visibility: hidden;
+            margin-top: -38vh;
+        }
+    }
+} 

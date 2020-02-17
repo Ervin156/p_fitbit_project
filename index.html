@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script async src="./index.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <img id='header-top' src="./P_Fitbit/P_date_tag.png" alt="P_date_tag.png">
+            <img id='header-buttom' src="./P_Fitbit/P_main_copy.png" alt="/P_main_copy.png">
+
+        </header>
+
+        <div class="main-body">
+            <div class="loading-container">
+                <img id="first" src="./P_Fitbit/P_Versa_Pink.png" alt="P_Versa_Grey.png">
+                <img id="second" src="./P_Fitbit/P_Charge3_Lilac.png" alt="P_Versa_Grey.png">
+                <img id="third" src="./P_Fitbit/P_HR_White.png" alt="P_Versa_Grey.png">
+                <div class="watch-shadow"> <img src="./P_Fitbit/P_shadow.png" alt="P_shadow.png"></div>
+                <div class="loading-price"> <img class="loading-price " src="./P_Fitbit/P_intro_pricetag.png" alt="P_intro_pricetag.png"></div>
+            </div>
+            <div class="select-product-container">
+                <img id="left-arrow" src="./P_Fitbit/P_arrow_left.png" alt="P_arrow_left.png">
+                <div class="current-product">
+                    <div class="versa-watches">
+                        <div class="slide">
+                            <img class='slide-item current-watch fade' id="first-versa-slide" src="./P_Fitbit/P_Versa_Pink.png" alt="P_Versa_Pink.png">
+                            <img class='slide-item current-watch fade block' id="second-versa-slide" src="./P_Fitbit/P_Versa_Grey.png" alt="P_P_Versa_Grey.png">
+                            <img class='slide-item current-watch fade' id="last-versa-slide" src="./P_Fitbit/P_Versa_Black.png" alt="P_Versa_Black.png">
+                            <div class="select-color-watch">
+                                <nav>
+                                    <div class="versa">
+                                        <img src="./P_Fitbit/P_Versa_Pink_on.png" onclick="currentSlide(1)" alt="P_Versa_Pink_on.png">
+                                        <img src="./P_Fitbit/P_Versa_Grey_off.png" onclick="currentSlide(2)" alt="P_Versa_Grey_off.png">
+                                        <img src="./P_Fitbit/P_Versa_Black_off.png" onclick="currentSlide(3)" alt="P_Versa_Black_off.png">
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="information-for-current-watch">
+                                <div class="name-current-watch fade">
+                                    <img src="./P_Fitbit/P_Versa_lockup.png" alt="P_Versa_lockup.png">
+                                </div>
+                                <div class="current-price fade">
+                                    <img src="./P_Fitbit/P_Versa_price.png" alt="P_Versa_price.png">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr-watches">
+                        <div class="slide">
+                            <img class='slide-item current-watch fade ' id="first-hr-slide" src="./P_Fitbit/P_HR_Black.png" alt="P_HR_Black.png">
+                            <img class='slide-item current-watch fade' id="second-hr-slide" src="./P_Fitbit/P_HR_Lilac.png" alt="P_HR_Lilac.png">
+                            <img class='slide-item current-watch fade' id="last-hr-slide" src="./P_Fitbit/P_HR_White.png" alt="P_HR_White.png">
+                            <div class="select-color-watch">
+                                <nav>
+                                    <div class="hr">
+                                        <img src="./P_Fitbit/P_HR_Black_on.png" onclick="currentSlide(4)" alt="P_HR_Black_on.png">
+                                        <img src="./P_Fitbit/P_HR_Lilac_on.png" onclick="currentSlide(5)" alt="P_HR_Lilac_on.png">
+                                        <img src="./P_Fitbit/P_HR_White_on.png" onclick="currentSlide(6)" alt="P_HR_White_on.png">
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="information-for-current-watch">
+                                <div class="name-current-watch fade">
+                                    <img src="./P_Fitbit/P_HR_lockup.png" alt="P_HR_lockup.png">
+                                </div>
+                                <div class="disclaimer fade">
+                                    <img src="./P_Fitbit/P_HR_disclaimer.png" alt="P_HR_disclaimer.png">
+                                </div>
+                                <div class="current-price">
+                                    <img src="./P_Fitbit/P_HR_price.png" alt="P_HR_price.png">
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="charge-watches">
+                        <div class="slide">
+                            <img class='slide-item current-watch fade ' id="first-charge-slide" src="./P_Fitbit/P_Charge3_Black.png" alt="P_Charge3_Black.png">
+                            <img class='slide-item current-watch fade' id="second-charge-slide" src="./P_Fitbit/P_Charge3_Lilac.png" alt="P_Charge_Lilac.png">
+                            <img class='slide-item current-watch fade' id="last-charge-slide" src="./P_Fitbit/P_Charge3_Blue.png" alt="P_Charge3_Blue.png">
+                            <div class="select-color-watch">
+                                <nav>
+                                    <div class="charge">
+                                        <img src="./P_Fitbit/P_Charge3_Black_on.png" onclick="currentSlide(7)" alt="P_Charge3_Black_on.png">
+                                        <img src="./P_Fitbit/P_Charge3_Lilac_on.png" onclick="currentSlide(8)" alt="P_charge_Lilac_on.png">
+                                        <img src="./P_Fitbit/P_Charge3_Blue_on.png" onclick="currentSlide(9)" alt="P_charge_Blue_on.png">
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="information-for-current-watch">
+                                <div class="name-current-watch fade">
+                                    <img src="./P_Fitbit/P_Charge3_lockup.png" alt="P_charge_lockup.png">
+                                </div>
+                                <div class="current-price fade">
+                                    <img src="./P_Fitbit/P_Charge3_price.png" alt="P_charge_price.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="watch-shadow"> <img src="./P_Fitbit/P_shadow.png" alt="P_shadow.png"></div>
+
+                </div>
+                <img id="right-arrow" src="./P_Fitbit/P_arrow_right.png" alt="P_arrow_right.png">
+            </div>
+
+            <footer>
+                <div class="footer">
+                    <a href="https://google.com" target="_blank"><img src="./P_Fitbit/P_fitbit_logo.png" alt="P_fitbit_logo.png"></a>
+                    <img src="./P_Fitbit/P_CTA.png" alt="P_CTA.png">
+                </div>
+            </footer>
+</body>
+
+</html>
