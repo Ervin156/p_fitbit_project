@@ -5,52 +5,49 @@ function slider(btnLeft, btnRight, currentWatch, currentContainer) {
     let containerIndex = 1;
     const watch = document.querySelectorAll(currentWatch);
     const conntainer = document.querySelectorAll(currentContainer);
-    const firsVersaSlide = document.querySelector('#first-versa-slide');
-    const firsHRSlide = document.querySelector('#first-hr-slide');
-    const lastVersaSlide = document.querySelector('#last-versa-slide');
-    const lastHRSlide = document.querySelector('#last-hr-slide');
-    const secondVersaSlide = document.querySelector('#second-versa-slide');
-    const secondHRSlide = document.querySelector('#second-hr-slide');
-    const firsChargeSlide = document.querySelector('#first-charge-slide');
-    const lastChargeSlide = document.querySelector('#last-charge-slide');
-    const secondChargeSlide = document.querySelector('#second-charge-slide');
+    const btnColorVersa = document.querySelector('.versa');
+    const btnColorHR = document.querySelector('.hr');
+    const btnColorCharge = document.querySelector('.charge');
 
-    currentSlide = (n) => {
-        showSlides(slideIndex = n);
+    showSlide(slideIndex);
+    btnColorVersa.addEventListener('click', event => {
+        clickFunction(event)
+    })
+    btnColorHR.addEventListener('click', event => {
+        clickFunction(event)
+    })
+    btnColorCharge.addEventListener('click', event => {
+        clickFunction(event)
+    })
+    clickFunction = event => {
+        if (event.target.parentElement !== btnColorVersa && event.target.parentElement !== btnColorHR && event.target.parentElement !== btnColorCharge) {
+            false
+        } else {
+            console.log(event.target.name)
+            for (let i = 0; i < watch.length; i++) {
+                watch[i].style.display = 'none';
+                if (event.target.name === watch[i].name)
+                    watch[i].style.display = 'block';
+            }
+        }
     }
 
-    apdatefirstVersaSlide = () => {
-        lastVersaSlide.style.display = 'none';
-        secondVersaSlide.style.display = 'none';
-        firsVersaSlide.style.display = 'block';
-    }
-
-    apdatefirstHRSlide = () => {
-        lastHRSlide.style.display = 'none';
-        secondHRSlide.style.display = 'none';
-        firsHRSlide.style.display = 'block';
-    }
-    apdatefirstChargeSlide = () => {
-        lastChargeSlide.style.display = 'none';
-        secondChargeSlide.style.display = 'none';
-        firsChargeSlide.style.display = 'block';
-    }
-
-    showSlides = () => {
-
+    function showSlide(slideIndex) {
         if (slideIndex > watch.length) {
             slideIndex = 1;
         }
         if (slideIndex < 1) {
             slideIndex = watch.length;
         }
+
         for (let i = 0; i < watch.length; i++) {
             watch[i].style.display = 'none';
         }
-        watch[slideIndex - 1].style.display = 'block';
+        watch[slideIndex - 1].style.display = "block";
+        console.log(watch[slideIndex - 1])
     }
 
-    showContainerSlides = () => {
+    function showContainerSlides() {
         if (containerIndex > conntainer.length) {
             containerIndex = 1;
         }
@@ -59,25 +56,23 @@ function slider(btnLeft, btnRight, currentWatch, currentContainer) {
         }
         for (let i = 0; i < conntainer.length; i++) {
             conntainer[i].style.display = 'none';
+            conntainer[containerIndex - 1].children[i].style.display = "none"
+
         }
         conntainer[containerIndex - 1].style.display = "block";
-        if (containerIndex == 1) {
-            apdatefirstVersaSlide();
+        console.log(conntainer[containerIndex - 1])
 
-        } else if (containerIndex == 2) {
-            apdatefirstHRSlide();
-        } else if (containerIndex == 3) {
-            apdatefirstChargeSlide();
-        }
+        conntainer[containerIndex - 1].children[0].style.display = "block"
     }
+
     left.onclick = () => {
         showContainerSlides(containerIndex++);
     }
     right.onclick = () => {
         showContainerSlides(containerIndex--);
     }
-    showSlides(slideIndex);
     showContainerSlides(containerIndex);
+
 }
 slider('#left-arrow', '#right-arrow', '.slide-item', '.slide');
 
@@ -91,7 +86,7 @@ function swipeFunction() {
     }, false);
     slideItem.addEventListener('touchend', function(event) {
         touchendX += event.changedTouches[0].screenX;
-        console.log(touchendX)
+        // console.log(touchendX)
         handleGesture();
     }, false);
 
@@ -109,4 +104,4 @@ function swipeFunction() {
         // }
     }
 }
-swipeFunction();
+swipeFunction()
