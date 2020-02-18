@@ -20,6 +20,7 @@ function slider(btnLeft, btnRight, currentWatch, currentContainer) {
     btnColorCharge.onclick = event => {
         clickFunction(event)
     };
+
     clickFunction = event => {
         if (event.target.parentElement !== btnColorVersa && event.target.parentElement !== btnColorHR && event.target.parentElement !== btnColorCharge) {
             false
@@ -61,7 +62,7 @@ function slider(btnLeft, btnRight, currentWatch, currentContainer) {
         conntainer[containerIndex - 1].style.display = "block";
         conntainer[containerIndex - 1].children[0].style.display = "block";
     };
-    
+
     left.onclick = () => {
         showContainerSlides(containerIndex++);
     };
